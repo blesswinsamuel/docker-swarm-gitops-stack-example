@@ -10,3 +10,12 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+
+  object-store:
+    image: blesswinsamuel/object-store:latest
+    deploy:
+      replicas: 1
+    networks:
+      - backend
+    environment:
+      PORT: 80
