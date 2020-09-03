@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  filecache:
+    image: blesswinsamuel/filecache:latest
+    deploy:
+      replicas: 1
+    environment:
+      PORT: 80

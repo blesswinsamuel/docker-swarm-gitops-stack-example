@@ -15,7 +15,5 @@ services:
     image: blesswinsamuel/object-store:latest
     deploy:
       replicas: 1
-    networks:
-      - backend
     environment:
       PORT: 80

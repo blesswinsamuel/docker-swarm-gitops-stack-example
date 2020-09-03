@@ -1,6 +1,13 @@
-stack_name: test_stack
-compose_files:
-  - dev/app.yml
 with_registry_auth: true
 prune: true
 resolve_image: always
+stacks:
+  - stack_name: test_stack
+    compose_files:
+      - dev/redis.yml
+      - dev/filecache.yml
+    environment:
+      API_TAG: latest
+      SSO_TAG: latest
+      CRON_TAG: latest
+      DASHBOARD_TAG: latest
