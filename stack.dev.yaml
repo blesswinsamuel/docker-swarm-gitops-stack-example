@@ -7,5 +7,5 @@ stacks:
       - dev/redis.yml
       - dev/filecache.yml
     environment:
-      REDIS_TAG: 6-alpine
+      REDIS_TAG: 5-alpine
       FILECACHE_TAG: latest
