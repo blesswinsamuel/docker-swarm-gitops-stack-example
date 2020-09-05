@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   filecache:
-    image: blesswinsamuel/filecache:latest
+    image: blesswinsamuel/filecache:${FILECACHE_TAG}
     deploy:
       replicas: 1
     environment:
