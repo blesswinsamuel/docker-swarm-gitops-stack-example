@@ -4,8 +4,8 @@ resolve_image: always
 stacks:
   - stack_name: test_stack
     compose_files:
-      - dev/redis.yml
+      - dev/hello.yml
       - dev/filecache.yml
     environment:
-      REDIS_TAG: 5-alpine
+      HELLO_TAG: 5-alpine
       FILECACHE_TAG: latest
