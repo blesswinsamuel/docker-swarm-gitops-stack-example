@@ -7,5 +7,5 @@ stacks:
       - dev/hello.yml
       - dev/filecache.yml
     environment:
-      HELLO_TAG: 5-alpine
+      HELLO_TAG: latest
       FILECACHE_TAG: latest
