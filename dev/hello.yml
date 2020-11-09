@@ -1,17 +1,17 @@
 version: "3.7"
 
-# configs:
-#   html:
-#     name: ymm_html_${html_hash}
-#     file: ./html/index.html
+configs:
+  html:
+    name: html_${html_hash}
+    file: ${PWD}/html/index.html
 
 services:
   hello:
     image: nginx:${HELLO_TAG}
-    # configs:
-    #   - source: ymm_html_${html_hash}
-    #     target: /usr/share/nginx/html/index.html
-    volumes:
-      - ./html:/usr/share/nginx/html:ro
+    configs:
+      - source: html
+        target: /usr/share/nginx/html/index.html
+    # volumes:
+    #   - ${PWD}/html:/usr/share/nginx/html:ro
     ports:
       - "8085:80"
